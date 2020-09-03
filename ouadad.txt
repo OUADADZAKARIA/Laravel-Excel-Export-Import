@@ -1,0 +1,36 @@
+
+
+https://docs.laravel-excel.com/3.1/getting-started/installation.html
+1) composer require maatwebsite/excel
+
+https://docs.laravel-excel.com/3.1/exports/
+2) php artisan make:export UsersExport --model=User
+
+3) php artisan make:controller UsersExportController
+
+
+/***************** 
+
+
+- maatwebsite/excel installation
+- artisan make:export & export users data into the excel
+- Exportable trait
+- Responsable interface
+- method/constructor dependency injection for Excel Class
+- Export formats (XLSX, XLS, CSV etc)
+- Export in PDF using DOMPDF
+- Export excel using arrays
+- Excel export from Laravel blade view
+- Auto size excel cell width
+- Mapping data
+- export data from the model relationship (for example User & Address model relationship)
+- add a heading row in excel
+- events & format cell in excel (eg: bold, border, color, etc)
+- export large data using `FromQuery` interface (Behind the scenes this query is executed in chunks).
+- display logo in excel sheet using `WithDrawings` interface
+- custom start cell
+- Laravel excel multiple sheets export example
+- Storing exports on disk
+
+
+*///////////////////
