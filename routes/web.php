@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/users/export','UsersExportController@export');
+Route::post('/users/import','UsersImportController@store')->name('users.store');

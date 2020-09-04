@@ -51,7 +51,7 @@ WithCustomStartCell :La cellule de début par défaut est A1. L'implémentation 
 
         //1)
         return User::all();
-        return User::where('email', 'like', '%regimeaz%')->get();
+       // return User::where('email', 'like', '%regimeaz%')->get();
 
 
         // //2)

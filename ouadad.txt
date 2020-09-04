@@ -1,15 +1,5 @@
+/*****************  #1: Laravel Excel Export data in Excel, CSV & multiple sheet export /*****************
 
-
-https://docs.laravel-excel.com/3.1/getting-started/installation.html
-1) composer require maatwebsite/excel
-
-https://docs.laravel-excel.com/3.1/exports/
-2) php artisan make:export UsersExport --model=User
-
-3) php artisan make:controller UsersExportController
-
-
-/***************** 
 
 
 - maatwebsite/excel installation
@@ -33,4 +23,51 @@ https://docs.laravel-excel.com/3.1/exports/
 - Storing exports on disk
 
 
-*///////////////////
+
+_______________________________________
+
+
+https://docs.laravel-excel.com/3.1/getting-started/installation.html
+1) composer require maatwebsite/excel
+
+https://docs.laravel-excel.com/3.1/exports/
+2) php artisan make:export UsersExport --model=User
+
+3) php artisan make:controller UsersExportController
+
+
+
+
+/*****************  #2: Laravel Excel Import to Database with Errors and Validation Handling   /*****************  
+
+- artisan make:import & import users data in the database
+- import route and form to upload excel file
+- Import excel file content into Database
+- `Importables` trait
+- `WithHeadingRow` interface to handle headings in excel file
+- Handling Errors
+- Handling validation errors
+- Batch inserts
+- Chunk reading
+- Queued imports
+- Import relationship model
+- `afterImport` Event
+
+
+https://docs.laravel-excel.com/3.1/imports/
+1) php artisan make:import UsersImport --model=User
+2) php artisan make:controller UserImportController
+
+
+...
+...
+
+
+/***********  Queued imports  /***********
+1) fichier env. 
+QUEUE_CONNECTION=sync  =======> QUEUE_CONNECTION=database
+
+2) php artisan queue:table
+3) php artisan migrate:refresh
+4) php artisan serve
+5) php artisan queue:work

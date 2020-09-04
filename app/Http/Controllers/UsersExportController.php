@@ -39,11 +39,8 @@ class UsersExportController extends Controller
          return $this->excel->download(new UsersExport, 'users.xlsx');
 
         /*****           Export formats :           ****/
-
-
         // https://docs.laravel-excel.com/3.1/exports/export-formats.html
         //return $this->excel->download(new UsersExport,'users.csv');
-
 
         // Export PDF :dompdf
         // https://github.com/dompdf/dompdf 
@@ -51,4 +48,5 @@ class UsersExportController extends Controller
 
         //return $this->excel->download(new UsersExport, 'users.pdf', Excel::DOMPDF);
     }
+
 }
